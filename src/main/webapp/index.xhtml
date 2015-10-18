@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+<h:head>
+	<style type="text/css">
+</style>
+</h:head>
+
+<h:body>
+	<h2>TSI4</h2>
+
+	<h:form id="cdiexample">
+		<h:panelGrid columns="2" styleClass="default">
+
+			<h:outputText value="Ingrese clave:" />
+			<h:inputText value="#{managerBB.clave}" />
+
+			<h:outputText value="Ingrese valor:" />
+			<h:inputText value="#{managerBB.valor}" />
+
+			<h:commandButton actionListener="#{managerBB.save}"
+				styleClass="buttons" value="Guardar" />
+
+			<h:commandButton actionListener="#{managerBB.imprimirLista()}"
+				styleClass="buttons" value="Mostrar" />
+
+			<h:messages />
+
+		</h:panelGrid>
+
+<!-- 		<h:dataTable value="#{propertyList}" var="item" styleClass="table" -->
+<!-- 			headerClass="table-header" rowClasses="table-odd-row,table-even-row"> -->
+<!-- 			<h:column> -->
+<!-- 				<f:facet name="header">Key</f:facet> -->
+<!-- 				<h:outputText value="#{item.key}" /> -->
+<!-- 			</h:column> -->
+<!-- 			<h:column> -->
+<!-- 				<f:facet name="header">Value</f:facet> -->
+<!-- 				<h:outputText value="#{item.value}" /> -->
+<!-- 			</h:column> -->
+<!-- 			<h:column> -->
+<!-- 				<f:facet name="header">Delete</f:facet> -->
+<!-- 				<h:commandButton actionListener="#{manager.clear(item)}" -->
+<!-- 					styleClass="buttons" value="Delete" /> -->
+<!-- 			</h:column> -->
+
+<!-- 		</h:dataTable> -->
+	</h:form>
+</h:body>
+</html>
